@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_instructions"
+        android:text="Hi User! Pick a category below and start the quiz!"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextSelectionScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorInstructionsBg"/>
+
+    <Button
+        android:id="@+id/button_easy_level"
+        android:text="@string/main_selection_easy"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_layout_selection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_bg_states" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_intermediate_level"
+            android:text="@string/main_selection_intermediate"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle_bg_states" />
+
+        <Button
+            android:id="@+id/button_aq"
+            android:text="@string/main_selection_aq"
+            android:textStyle="bold"
+            android:textSize="60sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle_bg_normal" />
+
+        <Button
+            android:id="@+id/button_advanced_level"
+            android:text="@string/main_selection_advanced"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle_bg_states" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_bonus_level"
+        android:text="@string/main_selection_bonus"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_selection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_bg_states" />
+
+    <Button
+        android:id="@+id/button_start_quiz"
+        android:text="@string/start_quiz_label"
+        android:textSize="15sp"
+        android:textColor="@color/colorTextSelectionScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_bg_states" />
+</RelativeLayout>

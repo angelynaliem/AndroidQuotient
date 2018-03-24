@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/text_view_progress_bar"
+        android:text="**************************************"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_progress_bar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_timer"
+            android:text="10s"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/text_view_question"
+            android:text="Put question here"
+            android:textSize="40sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/question_bg" />
+
+        <Button
+            android:id="@+id/button_hint"
+            android:text="@string/hint_label"
+            android:textColor="@color/colorTextHintButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_bg_states" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_choice_one"
+                android:text="Choice 1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button_choice_two"
+                android:text="Choice 2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_choice_three"
+                android:text="Choice 3"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button_choice_four"
+                android:text="Choice 4"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_next_question"
+        android:text="@string/next_question_label"
+        android:textColor="@color/colorTextHintButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_bg_states" />
+</RelativeLayout>
